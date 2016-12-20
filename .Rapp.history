@@ -1,0 +1,655 @@
+dates <- df %>% #
+    select(1, grep("date", names(df)))#
+    gather(key, value, -id)
+dates <- df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, value, -id)
+dates <- df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, date, -id)
+dates
+values <- df %>% #
+    select(1, grep("value", names(df))) %>% #
+    gather(key, value, -id)
+values
+dates <- df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, date, -id) %>% #
+    select(-key)
+dates
+values <- df %>% #
+    select(1, grep("value", names(df))) %>% #
+    gather(key, value, -id) %>% #
+    select(-key)
+values
+ld <- left_join(dates, values, by = "id")
+ld
+dates <- df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, date, -id)
+dates
+dates <- df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, date, -id) %>% #
+    separate(key, c("discard", "occasion"), sep = "\\D")
+dates
+dates <- df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, date, -id) %>% #
+    separate(key, c("discard", "occasion"), 5)
+dates
+df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, date, -id) %>% #
+    separate(key, c("discard", "occasion"), 4)
+dates <- df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, date, -id) %>% #
+    separate(key, c("discard", "occasion"), 4)
+dates <- df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, date, -id) %>% #
+    separate(key, c("discard", "occasion"), 4)#
+    select(-discard)
+values <- df %>% #
+    select(1, grep("value", names(df))) %>% #
+    gather(key, value, -id) %>% #
+    separate(key, c("discard", "occasion"), 4)#
+    select(-key)
+values <- df %>% #
+    select(1, grep("value", names(df))) %>% #
+    gather(key, value, -id) %>% #
+    separate(key, c("discard", "occasion"), 4) %>% #
+    select(-key)
+values <- df %>% #
+    select(1, grep("value", names(df))) %>% #
+    gather(key, value, -id) %>% #
+    separate(key, c("discard", "occasion"), 4) %>% #
+    select(-discard)
+values
+values <- df %>% #
+    select(1, grep("value", names(df))) %>% #
+    gather(key, value, -id) %>% #
+    separate(key, c("discard", "occasion"), 5) %>% #
+    select(-discard)
+values
+ld <- left_join(dates, values, by = c("id", "occassion"))
+ld <- left_join(dates, values, by = c("id", "occasion"))
+ld
+dates <- df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, date, -id) %>% #
+    separate(key, c("discard", "occasion"), 4)#
+    select(-discard)#
+#
+values <- df %>% #
+    select(1, grep("value", names(df))) %>% #
+    gather(key, value, -id) %>% #
+    separate(key, c("discard", "occasion"), 5) %>% #
+    select(-discard)
+ld <- left_join(dates, values, by = c("id", "occasion"))
+ld
+dates <- df %>% #
+    select(1, grep("date", names(df))) %>% #
+    gather(key, date, -id) %>% #
+    separate(key, c("discard", "occasion"), 4) %>% #
+    select(-discard)#
+#
+values <- df %>% #
+    select(1, grep("value", names(df))) %>% #
+    gather(key, value, -id) %>% #
+    separate(key, c("discard", "occasion"), 5) %>% #
+    select(-discard)#
+#
+ld <- left_join(dates, values, by = c("id", "occasion"))#
+ld
+ld %>% #
+    group_by(id) %>% #
+    arrange(date) %>% #
+    summarize(min = min(value))
+163*4
+109*4
+146*4
+b <- f(a)
+a <- 1
+f <- function(x){class(x) <- "first"}
+b <- f(a)
+class(b)
+b
+f <- function(x){structure(x, class = "first")}
+b <- f(a)
+class(b)
+group = c("a", "b", "c", "c")#
+id1 = c(1, 0, 0, 0) #
+id2 = c(0, 1, 0, 1)#
+id3 = c(0, 0, 1, 0) #
+df1 = data.frame(group,id1, id2, id3) #
+df1#
+#
+id = c("id1", "id2", "id3") #
+iv1 = c(2, 3, 3) #
+iv2 = c(3, 2, 3) #
+df2 = data.frame(id, iv1, iv2) #
+df2
+library(dplyr)
+df1 %>% select(group)
+d <- df1 %>% #
+    gather(id, value, -group) %>% #
+    left_join(df2, by = "id")
+d %>% select(group)
+library(tidyr)
+d <- c(1.73, 1.06, 2.03, 1.40, 0.95, 1.13, 1.41, 1.73, 1.63, 1.56)
+t_test <- t.test(d, rep(1, length(d)))
+probs <- mapply(pt, t_test$statistic, t_test$parameter, seq(-15, 15, length = 1e5))
+probs <- mapply(pt, t_test$statistic, t_test$parameter, seq(-15, 15, length = 1e4))
+probs <- data.frame(ncp = seq(-15, 15, length = 1e4), prob = probs)
+probs$lower <- 0.025 - probs[ ,2]
+probs$upper <- 0.975 - probs[ ,2]
+probs[which.min(abs(probs$lower)), 1]
+probs[which.min(abs(probs$upper)), 1]
+probs[which.min(abs(probs$upper)), ]
+d <- c(1.73, 1.06, 2.03, 1.40, 0.95, 1.13, 1.41, 1.73, 1.63, 1.56)#
+#
+t_test <- t.test(d, rep(1, length(d)))#
+#
+prob <- mapply(pt, t_test$statistic, t_test$parameter, seq(-15, 15, length = 1e4))#
+#
+probs <- data.frame(ncp = seq(-15, 15, length = 1e4), prob = prob)#
+#
+probs$lower <- 0.025 - probs[ ,2]#
+probs$upper <- 0.975 - probs[ ,2]#
+#
+probs[which.min(abs(probs$lower)), 1]#
+probs[which.min(abs(probs$upper)), 1]
+t_test$statistic
+probs[which.min(abs(probs$lower)), 1]
+probs[which.min(abs(probs$upper)), 1]
+# test data#
+    d <- c(1.73, 1.06, 2.03, 1.40, 0.95, 1.13, 1.41, 1.73, 1.63, 1.56)#
+#
+    # t-test#
+    t_test <- t.test(d, rep(1, length(d)))#
+#
+    # calculate probability of the t stat under with many ncp#
+    prob <- mapply(pt, t_test$statistic, t_test$parameter, seq(-15, 15, length = 1e4))#
+#
+    probs <- data.frame(ncp = seq(-15, 15, length = 1e4), prob = prob)#
+#
+    probs$upper <- 0.025 - probs[ ,2]#
+    probs$lower <- 0.975 - probs[ ,2]#
+#
+    # find ncp for upper bound#
+    probs[which.min(abs(probs$upper)), 1]
+probs[which.min(abs(probs$lower)), 1]
+# test data#
+    d <- c(1.73, 1.06, 2.03, 1.40, 0.95, 1.13, 1.41, 1.73, 1.63, 1.56)#
+#
+    # t-test#
+    t_test <- t.test(d, rep(1, length(d)))
+upper <- optim(par = c(x=1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))
+?optimize
+upper
+upper$par
+upper <- optim(par = c(upper = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))
+upper
+optimize(function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)),#
+        c(-200, 200))
+optimize(function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)),#
+        seq(-200, 200, length = 1e5))
+?optim
+upper <- optim(par = c(upper = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)),#
+         method = "Brent")
+upper <- optim(par = c(x = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)),#
+         method = "Brent")
+upper <- optim(par = c(x = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)),#
+         method = "Brent",#
+         lower = -200,#
+         upper = 200)
+upper
+abs(0.025-pt(t_test$statistic, t_test$parameter, 47.2136))
+pt(t_test$statistic, t_test$parameter, 47.2136)
+optimize(function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)),#
+        lower = -200,#
+        upper = 200)
+optim( par =c( x=1), #
+         function( ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp) ))
+optim( par =c( x=1), #
+         function( ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)) #
+        method = "Brent",#
+        lower = -15,#
+        upper = 15)
+optim( par =c( x=1), #
+        function( ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)), #
+        method = "Brent",#
+        lower = -15,#
+        upper = 15)
+optim( par =c( x=1), #
+        function( ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)), #
+        method = "Brent",#
+        lower = -200,#
+        upper = 200)
+abs(0.975-pt(t_test$statistic, t_test$parameter, -105.5728))
+0.975-pt(t_test$statistic, t_test$parameter, -105.5728)
+optim( par =c( x=1), #
+        function( ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)), #
+        method = "Brent",#
+        lower = -600,#
+        upper = 600)
+optim( par =c( x=1), #
+        function( ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)), #
+        method = "Brent",#
+        lower = -20,#
+        upper = 20)
+optim( par =c( x=1), #
+        function( ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)), #
+        method = "Brent",#
+        lower = -1000,#
+        upper = 1000)
+plot(seq(-1000, 1000, length = 1e4), seq(0, 0.05, length = 1e4), type = "n")
+lines(seq(-1000, 1000, length = 1e4), #
+        dt(seq(-1000, 1000, length = 1e4), t_test$parameter, -527.864))
+plot(seq(-1000, 1000, length = 1e4), seq(0, 0.01, length = 1e4), type = "n")
+lines(seq(-1000, 1000, length = 1e4), #
+        dt(seq(-1000, 1000, length = 1e4), t_test$parameter, -527.864))
+a=c(-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9)
+b=matrix(a,8,9)
+a
+b
+a <- a[a >= -5 & a <= 5]
+a
+optim( par =c( x=1), #
+        function( ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)), #
+        method = "Brent",#
+        lower = -5*abs(t_test$statistic),#
+        upper = 5*abs(t_test$statistic))
+optimize(function( ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)), #
+        lower = -5*abs(t_test$statistic),#
+        upper = 5*abs(t_test$statistic))
+-5*abs(t_test$statistic)
+optimize(function( ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)), #
+        lower = -4*abs(t_test$statistic),#
+        upper = 4*abs(t_test$statistic))
+mapply(pt, t_test$statistic, t_test$parameter, seq(-15, 15, length = 1e4))
+upper <- optim(par = c(x = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, 47.2136)))
+upper
+upper <- optim(par = c(upper = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, 47.2136)))
+upper
+upper <- optim(par = c(upper = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))#
+upper
+lower <- optim(par = c(lower = 1), #
+         function(ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)))
+lower
+upper$par
+upper <- optim(#par = c(upper = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))
+upper <- optim(par = c(upper = 1:2), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))
+upper <- optim(par = c(upper = 2), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))
+upper
+es <- function(x1, x2) {#
+    m1 <- mean(x1, na.rm = TRUE)#
+    m2 <- mean(x2, na.rm = TRUE)#
+    pooled <- (sd(x1, na.rm = TRUE) + sd(x2, na.rm = TRUE)) / 2#
+    (m2 - m1)/pooled #
+}
+es(d, rep(1, length(d)))
+es(rep(1, length(d)), d)
+length(d)
+mean(d)
+(mean(d) - 1) /sd(d)
+1.472336/sqrt(9)
+7.007642/sqrt(9)
+invisible(#
+upper <- optim(par = c(upper = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))#
+lower <- optim(par = c(lower = 1), #
+         function(ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)))#
+)
+upper <- optim(par = c(upper = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))
+invisible(#
+upper <- optim(par = c(upper = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))#
+)
+suppressWarnings(#
+upper <- optim(par = c(upper = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))#
+#
+lower <- optim(par = c(lower = 1), #
+         function(ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)))#
+)
+suppressWarnings(#
+upper <- optim(par = c(upper = 1), #
+         function(ncp) abs(0.025-pt(t_test$statistic, t_test$parameter, ncp)))#
+)
+lower <- optim(par = c(lower = 1), #
+         function(ncp) abs(0.975-pt(t_test$statistic, t_test$parameter, ncp)))
+females <- as.data.frame(matrix(c(0,0,0,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,1,1,0,1,1,1), nrow=5, byrow=T))#
+males <- as.data.frame(matrix(c(1,0,0,1,1,0,1,0,1,1,1,0,1,0,1,1,1,0,1,1,1,0,1,0,1), nrow=5, byrow=T))#
+rownames(females) <-c ("female_1","female_2","female_3","female_4","female_5")#
+rownames(males) <-c ("male_1","male_2","male_3","male_4","male_5")
+females
+males
+outer(males, females, function(x, y) sum(x == y))
+outer(males, females function(x, y) males[x] == females(y))
+outer(males, females, function(x, y) males[x] == females(y))
+females <- as.matrix(females)
+males <- as.matrix(males)
+outer(males, females, function(x, y) males[x] == females(y))
+outer(males, females, function(x, y) males[x] == females[y])
+cancers = c("All Cancers", "SCLC", "Lu SCC", "Lung AC", "Larynx", "Pharynx Oral", "Cavity", "Esophageal SCC", "Esophageal AC", "Bladder", "Liver", "Cervix", "Kidney", "Pancreas")#
+oddsRatio = c(1, 111.3, 103.5, 21.9, 13.2, 6.6, 4.2, 3.9, 3.9, 3.8, 2.9, 1.8, 1.7, 1.6)#
+foldIncrease = c(1.15464695360441, 0.858680717668245, 1.29986125563649, 4.56755645705811, 2.52922152922153, 0.818596228001855, 0.892133516869108, 1.04842410881178, 1.01791768793961, 1.1423932173087, 1.1871100629828, 0.857694671793762, 1.39573948596081, 1.33458517681876)#
+#
+cancerData = data.frame(cancers, oddsRatio, foldIncrease)#
+#
+par(mar = c(5,5,2,5))#
+with(cancerData, plot(cancers, oddsRatio, type="scatter", col="red3", #
+             ylab='Odds Ratio',#
+             ylim=c(0,150)))
+par(new = T)#
+with(cancerData, plot(cancers, foldIncrease, pch=16, axes=F, xlab=NA, ylab=NA, cex=1.2))#
+axis(side = 4)#
+mtext(side = 4, line = 3, 'Fold Increase')
+head(cancerData)
+library(tidyverse)
+cancerDate %>% #
+    gather(data = -cancers)
+cancerData %>% #
+    gather(data = -cancers)
+tidy <- cancerData %>% #
+    gather(key, var, -cancers)
+head(tidy)
+tidy <- cancerData %>% #
+    gather(stat, val, -cancers)
+ggplot(tidy, aes(cancers, val, group = key)) + geom_bar()
+tidy <- cancerData %>% #
+    gather(stat, val, -cancers)
+ggplot(tidy, aes(cancers, val, group = stat)) + geom_bar()
+head(tidy)
+tidy <- cancerData %>% #
+    gather(stats, val, -cancers)
+ggplot(tidy, aes(cancers, val, group = stats)) + geom_bar()
+ggplot(tidy, aes(cancers, val, group = stat)) + geom_bar(stat = identity)
+tidy <- cancerData %>% #
+    gather(stats, val, -cancers)
+ggplot(tidy, aes(cancers, val, group = stat)) + geom_bar(stat = identity)
+ggplot(tidy, aes(cancers, val)) + #
+    geom_bar(aes(fill = stats), stat = "identity")
+ggplot(tidy, aes(cancers, val)) + #
+    geom_bar(aes(fill = stats), stat = "identity", position = "dodge")
+head(cancerData)
+log(cancerData$oddsRatio)
+old_dir <- getwd()#
+setwd("/Users/Daniel/CTL/MSIP/data/2012-13/Outcome/")#
+d <- read.csv("MSIP.outcome.sample.1213.csv")#
+setwd(old_dir)
+library(RColorBrewer)#
+pal <- brewer.pal(5, "RdBu")#
+#
+cols <- d$txPart#
+cols[cols == 0] <- pal[2]#
+cols[cols == 1] <- pal[4]#
+#
+discont_plot <- function(outcome, ...) {#
+#
+    plot(outcome ~ new.cutz8.cen, #
+            data = d, #
+            col = cols, #
+            bty = "n", #
+            xlab = "Student-level Cut Score",#
+            ...)#
+    abline(v = 0)#
+#
+    m <- lm(outcome ~ new.cutz8.cen + txPart, data = d)#
+#
+    pred_part <- predict(m, #
+                    newdata = data.frame(new.cutz8.cen = seq(-3, 0, 0.1), #
+                                         txPart = 1),#
+                    se.fit = TRUE)#
+    pred_no_part <- predict(m, #
+                    newdata = data.frame(new.cutz8.cen = seq(0, 4, 0.1), #
+                                         txPart = 0),#
+                    se.fit = TRUE)#
+#
+    polygon(x = c(seq(-3, 0, 0.1), rev(seq(-3, 0, 0.1))), #
+            y = c(pred_part$fit - (1.96 * pred_part$se.fit), #
+                rev(pred_part$fit + (1.96 * pred_part$se.fit))),#
+            col = rgb(0.8, .8, .8, 1), border = NA)#
+#
+    polygon(x = c(seq(0, 4, 0.1), rev(seq(0, 4, 0.1))), #
+            y = c(pred_no_part$fit - (1.96 * pred_no_part$se.fit), #
+                rev(pred_no_part$fit + (1.96 * pred_no_part$se.fit))),#
+            col = rgb(0.8, .8, 0.8, 1), border = NA)#
+    lines(seq(-3, 0, 0.1), #
+        pred_part$fit, #
+        col = pal[5], #
+        lwd = 3,#
+        lty = 2)#
+    lines(seq(0, 4, 0.1), #
+        pred_no_part$fit, #
+        col = pal[1], #
+        lwd = 3,#
+        lty = 2)#
+#
+    legend("bottomright", #
+        legend = c("Treatment", "Control"),#
+        lty = 2,#
+        lwd = 2,#
+        pch = 1,#
+        col = c(pal[4], pal[2]),#
+        box.lwd = 0)#
+}#
+discont_plot(d$oaks8, #
+    main = "Impact on 2008 OAKS", #
+    ylab = "OAKS: 2008")#
+discont_plot(d$prf8,#
+    main = "Impact on 2008 PRF",#
+    ylab = "PRF: 2008")
+library(gamm4)
+?gamm4
+install.packages("gam")
+library(gam)
+?gam
+head(d)
+m <- gam(oaks8 ~ cutz8.cen, data = d)
+plot(m)
+summary(m)
+m <- gam(oaks8 ~ lo(cutz8.cen), data = d)
+summary(m)
+library(gam)
+m <- gam(oaks8 ~ lo(cutz8.cen), data = d)
+summary(m)
+data(airquality)
+gam(Ozone^(1/3) ~ lo(Solar.R) + lo(Wind, Temp), data=airquality, na=na.gam.replace)
+library(gam)
+data(airquality)
+airquality
+gam(Ozone^(1/3) ~ lo(Solar.R) + lo(Wind, Temp), data=airquality, na=na.gam.replace)
+data(kyphosis)#
+    gam(Kyphosis ~ s(Age,4) + Number, family = binomial, data=kyphosis,#
+    trace=TRUE)
+m <- gam(Kyphosis ~ s(Age,4) + Number, family = binomial, data=kyphosis,#
+    trace=TRUE)
+summary(m)
+plot(m)
+m <- gam(Kyphosis ~ poly(Age,2) + s(Start), data=kyphosis, family=binomial, subset=Number>2)#
+plot(m)
+data(gam.data)#
+    gam.object <- gam(y ~ s(x,6) + z,data=gam.data)#
+    summary(gam.object)#
+    plot(gam.object,se=TRUE)
+21785.50 - 5000
+21785.50 - 500
+devtools::install_github("thomasp85/ggforce")
+library(ggforce)
+ggplot(diamonds) +#
+    geom_point(aes(carat, price)) +#
+    facet_wrap_paginate(~cut:clarity, ncol = 3, nrow = 3, page = 4)
+10/2
+10*1/2
+.12*429
+library(rmarkdown)
+render("/Users/Daniel/CTL/Conferences/PI_Meeting/one_pager.Rmd")
+library(rmarkdown)#
+render("/Users/Daniel/CTL/Conferences/PI_Meeting/one_pager.Rmd")
+multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {#
+  library(grid)#
+#
+  # Make a list from the ... arguments and plotlist#
+  plots <- c(list(...), plotlist)#
+#
+  numPlots = length(plots)#
+#
+  # If layout is NULL, then use 'cols' to determine layout#
+  if (is.null(layout)) {#
+    # Make the panel#
+    # ncol: Number of columns of plots#
+    # nrow: Number of rows needed, calculated from # of cols#
+    layout <- matrix(seq(1, cols * ceiling(numPlots/cols)),#
+                    ncol = cols, nrow = ceiling(numPlots/cols))#
+  }#
+#
+ if (numPlots==1) {#
+    print(plots[[1]])#
+#
+  } else {#
+    # Set up the page#
+    grid.newpage()#
+    pushViewport(viewport(layout = grid.layout(nrow(layout), ncol(layout))))#
+#
+    # Make each plot, in the correct location#
+    for (i in 1:numPlots) {#
+      # Get the i,j matrix positions of the regions that contain this subplot#
+      matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))#
+#
+      print(plots[[i]], vp = viewport(layout.pos.row = matchidx$row,#
+                                      layout.pos.col = matchidx$col))#
+    }#
+  }#
+}
+library(tidyverse)
+old_dir <- getwd()#
+setwd("/Users/Daniel/CTL/MSIP/data/2012-13/Outcome/")#
+d <- read_csv("MSIP.outcome.sample.1213.csv")[ ,-1]#
+setwd(old_dir)#
+#
+d <- subset(d, txAssign != 9 & txPart != 9)#
+#
+d$leq.cut <- as.factor(d$leq.cut)
+library(gamm4)
+mod <- gamm4(oaks8 ~  s(new.cutz8.cen, by = factor(leq.cut)) +#
+        leq.cut + new.cutpoint8.z,#
+            random = ~(leq.cut|schIDatt),#
+            data = d,#
+            na.action = na.exclude)#
+#
+lower <- predict(mod$gam, data.frame(new.cutz8.cen = seq(-3, 0, .01),#
+                                     leq.cut = 1, #
+                                    new.cutpoint8.z = mean(d$new.cutpoint8.z)),#
+            se.fit = TRUE)#
+lower_fit <- data.frame(new.cutz8.cen = seq(-3, 0, .01), oaks8 = lower$fit,#
+             txPart = 1)#
+#
+upper <- predict(mod$gam, data.frame(new.cutz8.cen = seq(0, 5, .01),#
+                                     leq.cut = 1, #
+                                    new.cutpoint8.z = mean(d$new.cutpoint8.z)),#
+            se.fit = TRUE)#
+upper_fit <- data.frame(new.cutz8.cen = seq(0, 5, .01), oaks8 = upper$fit,#
+             txPart = 0)#
+no_shows <- round(with(d, prop.table(table(txPart, leq.cut), 2))[1, 2]*100, 2)#
+crossovers <- round(with(d, prop.table(table(txPart, leq.cut), 2))[2, 1]*100, 2)#
+#
+library(RColorBrewer)#
+pal <- brewer.pal(5, "RdBu")#
+#
+p2 <- ggplot(d, aes(new.cutz8.cen, oaks8, color = factor(txPart))) + #
+    geom_point() +#
+    geom_line(data = lower_fit, lwd = 1.25, color = pal[5]) +#
+    geom_line(data = upper_fit, lwd = 1.25, color = pal[1]) +#
+    geom_vline(xintercept = 0, lty = "dashed") +#
+    annotate("text", #
+        label = paste0(no_shows, "%", "\n No Shows"), x = -2, y = 260,#
+        cex = 3) +#
+    annotate("text", #
+        label = paste0(crossovers, "%", "\n Crossovers"), x = 4, y = 210,#
+        cex = 3) +#
+    scale_color_manual(name="Treatment Status",#
+                        breaks=c("0","1"),#
+                        labels=c("Control", "Treatment"),#
+                        values = c(pal[2], pal[4])) +#
+    labs(x = "Prior Achievement", y = "State Test Score",#
+        title = "Fuzzy RD fit with GAM")
+p_gap <- gamm4(txPart ~ leq.cut + #
+                s(new.cutz8.cen, by = leq.cut),#
+            random = ~(leq.cut|schIDatt),#
+            data = d)#
+re_p <- ranef(p_gap$mer, condVar = TRUE)#
+pv_p <- attr(re_p[[1]], "postVar")#
+se_p <- sqrt(apply(pv_p, 3, diag))#
+lower_p <- re_p[[1]][ ,2] + qnorm(0.025) * se[2, ]#
+upper_p <- re_p[[1]][ ,2] + qnorm(0.975) * se[2, ]#
+#
+pd2 <- data.frame(School = factor(1:length(unique(d$schIDatt)), #
+                            labels = unique(d$schIDatt)), #
+                 Estimate = re_p[[1]]$leq.cut1,#
+                 Lower = lower_p, #
+                 Upper = upper_p)#
+pd2 <- pd2[order(pd2$Estimate), ]#
+pd2$School <- factor(1:25, labels = pd2$School)
+lower_p <- re_p[[1]][ ,2] + qnorm(0.025) * se_p[2, ]
+upper_p <- re_p[[1]][ ,2] + qnorm(0.975) * se_p[2, ]
+pd2 <- data.frame(School = factor(1:length(unique(d$schIDatt)), #
+                            labels = unique(d$schIDatt)), #
+                 Estimate = re_p[[1]]$leq.cut1,#
+                 Lower = lower_p, #
+                 Upper = upper_p)
+pd2 <- pd2[order(pd2$Estimate), ]
+pd2$School <- factor(1:25, labels = pd2$School)
+ggplot(pd2, aes(Estimate, School)) + #
+    geom_errorbarh(aes(xmin = Lower, xmax = Upper), color = "gray70") +#
+    geom_point(color = "gray40") +#
+    geom_vline(xintercept = 0, lty = 2) +#
+    labs(title = "Probability of Receiving Treatment") +#
+    theme_classic() +#
+    theme(axis.text = element_text(size = 5))
+render("/Users/Daniel/CTL/Conferences/PI_Meeting/one_pager.Rmd")
+library(rmarkdown)
+render("/Users/Daniel/CTL/Conferences/PI_Meeting/one_pager.Rmd")
+library(rmarkdown)
+render("/Users/Daniel/CTL/Conferences/PI_Meeting/one_pager.Rmd")
+library(rmarkdown)
+render("/Users/Daniel/CTL/Conferences/PI_Meeting/one_pager.Rmd")
+library(rmarkdown)
+render("/Users/Daniel/CTL/Conferences/PI_Meeting/one_pager.Rmd")
+setwd("/Users/Daniel/Dropbox/Teaching/ev_base_DM/lectures/intro_data/")
+slidify::slidify("intro_data.Rmd")
+slidify::slidify("intro_data.Rmd")
+slidify::slidify("intro_data.Rmd")
+library(slidify)
+?publish
+list.files()
+publish("intro_data")
+publish("intro_data", "DJAnderson07")
+publish(repo = "intro_data", user = "DJAnderson07")
+publish(user = "DJAnderson07", repo = "intro_data")
+author("intro_data2")
+setwd("..")
+setwd("./intro_data2")
+slidify("index.Rmd")
+publish(user = "DJAnderson07", repo = "intro_data")
+setwd("/Users/Daniel/Dropbox/Teaching/ev_base_DM/lectures/")
+author(intro_data)
+author("intro_data")
+slidify("index.Rmd")
+slidify("index.Rmd")
+publish(user = "DJAnderson07", repo = "intro_data")
