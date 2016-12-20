@@ -1,4 +1,5 @@
 base
+slidify
 knitr
 tidyverse
 ggplot2
@@ -9,4 +10,3 @@ purrr
 dplyr
 stringr
 RColorBrewer
-slidify

@@ -166,9 +166,8 @@ Hadley Wickham
 *** =right
 
 <div align = "center">
-<img src = assets/img/hadley_jss.png width = 500 height = 750>
+<img src = assets/img/hadley_JSS.png width = 500 height = 750>
 </div>
-
 
 ----
 ## Common ways datasets are "messy"
