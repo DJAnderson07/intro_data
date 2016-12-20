@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>An introduction to Data</title>
+  <meta charset="utf-8">
+  <meta name="description" content="An introduction to Data">
+  <meta name="author" content="Daniel Anderson">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/zenburn.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>An introduction to Data</h1>
+    <h2>Data based decision making course</h2>
+    <p>Daniel Anderson<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="quote segue" id="slide-1" style="background:;">
+  <article data-timings="">
+    <style>
+em {
+  font-style: italic
+}
+</style>
+
+<style>
+strong {
+  font-weight: bold;
+}
+</style>
+
+<p><q> There were five Exabytes of information created between the dawn of civilization through 2003, but that much information is now created every two days, and the pace is increasing.</p>
+
+<p><br></p>
+
+<p>Then Google CEO Eric Schmidt in 2010 </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Where?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/tweets.png" alt="tweets">
+<img src="assets/img/google.png" alt="google">
+<img src="assets/img/cameras.png" alt="cameras">
+<img src="assets/img/facebook.png" alt="facebook">
+<img src="assets/img/books.png" alt="books">
+<img src="assets/img/world_plugin.png" alt="world_plugin">
+<img src="assets/img/brain.png" alt="brain"></p>
+
+<div style='float:left;width:48%;'>
+  
+</div>
+<div style='float:right;width:48%;'>
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/drob_trump.png" alt="drob_trump"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <article data-timings="">
+    <p><img src="assets/img/iphone_android.png" alt="iphone_android"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <article data-timings="">
+    <div align = "center">
+<img src = assets/img/trump_man_rt.png width = 500 height = 650>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <article data-timings="">
+    <div align = "center">
+<img src = assets/img/trump_pic_link.png width = 750 height = 650>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <article data-timings="">
+    <p><img src="assets/img/sentiment_anlys.png" alt="sentiment_anlys"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>USGS: Earthquake detection</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/usgs_earthquakes.png" alt="usgs_earthquakes"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <article data-timings="">
+    <p><img src="assets/img/usgs_twitter.png" alt="usgs_twitter"></p>
+
+<p><a href="https://blog.twitter.com/2015/usgs-twitter-data-earthquake-detection">https://blog.twitter.com/2015/usgs-twitter-data-earthquake-detection</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>In Education</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/test.png" alt="test">
+<img src="assets/img/test_time.png" alt="test_time">
+<img src="assets/img/easycbm.png" alt="easycbm"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <p><img src="assets/img/parent_portal.png" alt="parent_portal">
+<img src="assets/img/writing.png" alt="writing"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/img/reg_form.png" alt="reg_form">
+<img src="assets/img/kinder.png" alt="kinder">
+<img src="assets/img/registration.png" alt="registration"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <p><img src="assets/img/rplot.png" alt="rplot"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div align = "center">
+<img src = assets/img/long_data.png width = 500 height = 500>
+</div>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Discussion</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>How does this effect teaching?</li>
+</ul>
+
+<ul class = "build incremental">
+<li>Are data outside of education relevant? (e.g., twitter, facebook)</li>
+<li>How can we harness the data to help improve education? (think broadly and &quot;outside the box&quot;)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Steps in utilizing data</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol class = "build incremental">
+<li>Identify a question/problem</li>
+<li>Gather the data 
+
+<ul>
+<li>Collect, if necessary </li>
+<li>Often extant data can get you close, if not exactly what you need</li>
+</ul></li>
+<li>Analyze the data
+
+<ul>
+<li>Does not need to be complicated</li>
+<li>Visual analysis can often be incredibly powerful and revealing</li>
+<li>Linear regression (which we won&#39;t talk about much) is a very simple technique that can often be competitive with more advanced methods</li>
+<li>Complexity of the question and the data often drive the complexity of the analysis</li>
+</ul></li>
+<li>Make an inference and form a conclusion
+
+<ul>
+<li>Understand you&#39;re estimating (temper claims)</li>
+<li>Not all data are created equal - garbage in garbage out</li>
+</ul></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Data basics</h2>
+  </hgroup>
+  <article data-timings="">
+    <h1>Observations, Variables, Values, and Observational Units</h1>
+
+<p>Generally, the following should hold:</p>
+
+<ul class = "build incremental">
+<li>Observation
+
+<ul>
+<li>Each row of the dataset represents an observation</li>
+</ul></li>
+<li>Variables
+
+<ul>
+<li>Each column of the dataset represents a variable</li>
+</ul></li>
+<li>Values
+
+<ul>
+<li>Each cell of the dataset represents a value (intersection between an observation and a variable).</li>
+</ul></li>
+<li>Observational Units
+
+<ul>
+<li>Where are the observations collected from? Students? Schools? Parents? Administrators? etc.</li>
+<li>Generally a <em>level</em> of the unit will repeat for multiple observations, unless the number of observations = number of levels within the unit (e.g., one observation per student).</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Caution</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>These terms are not universal, but are a good way to <em>think</em> about data. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="quote segue" id="slide-17" style="background:;">
+  <article data-timings="">
+    <p><q> &quot;It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data&quot;</p>
+
+<p><br></p>
+
+<p>Hadley Wickham</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Data structuring: Making data usable</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <ul>
+<li>Persistent and varied challenge</li>
+<li>Little research on how to do it well
+
+<ul>
+<li>Enter Hadley Wickham</li>
+</ul></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div align = "center">
+<img src = assets/img/hadley_jss.png width = 500 height = 750>
+</div>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Common ways datasets are &quot;messy&quot;</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Column headers are values, not variable names</li>
+<li>Multiple variables stored in one column</li>
+<li>Variables are stored in both rows and columns</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>An example with SEDA data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Any ideas why this is messy? </p>
+
+<table><thead>
+<tr>
+<th align="right">leaid</th>
+<th align="left">leaname</th>
+<th align="right">fips</th>
+<th align="left">stateabb</th>
+<th align="right">year</th>
+<th align="right">grade</th>
+<th align="right">mean_link_ela</th>
+<th align="right">se_link_ela</th>
+<th align="right">mean_link_math</th>
+<th align="right">se_link_math</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right">100002</td>
+<td align="left">ALABAMA YOUTH SERVICES</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2009</td>
+<td align="right">8</td>
+<td align="right">210.55</td>
+<td align="right">6.72</td>
+<td align="right">220.67</td>
+<td align="right">7.06</td>
+</tr>
+<tr>
+<td align="right">100002</td>
+<td align="left">ALABAMA YOUTH SERVICES</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2011</td>
+<td align="right">8</td>
+<td align="right">231.66</td>
+<td align="right">6.74</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr>
+<td align="right">100002</td>
+<td align="left">ALABAMA YOUTH SERVICES</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2012</td>
+<td align="right">8</td>
+<td align="right">226.18</td>
+<td align="right">6.66</td>
+<td align="right">233.13</td>
+<td align="right">6.98</td>
+</tr>
+<tr>
+<td align="right">100005</td>
+<td align="left">ALBERTVILLE CITY</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2009</td>
+<td align="right">3</td>
+<td align="right">204.47</td>
+<td align="right">2.75</td>
+<td align="right">216.36</td>
+<td align="right">2.01</td>
+</tr>
+<tr>
+<td align="right">100005</td>
+<td align="left">ALBERTVILLE CITY</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2009</td>
+<td align="right">4</td>
+<td align="right">207.40</td>
+<td align="right">2.94</td>
+<td align="right">223.03</td>
+<td align="right">2.34</td>
+</tr>
+<tr>
+<td align="right">100005</td>
+<td align="left">ALBERTVILLE CITY</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2009</td>
+<td align="right">5</td>
+<td align="right">216.86</td>
+<td align="right">2.60</td>
+<td align="right">230.42</td>
+<td align="right">2.29</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>The offending columns</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<table><thead>
+<tr>
+<th align="right">mean_link_ela</th>
+<th align="right">se_link_ela</th>
+<th align="right">mean_link_math</th>
+<th align="right">se_link_math</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right">210.55</td>
+<td align="right">6.72</td>
+<td align="right">220.67</td>
+<td align="right">7.06</td>
+</tr>
+<tr>
+<td align="right">231.66</td>
+<td align="right">6.74</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+<tr>
+<td align="right">226.18</td>
+<td align="right">6.66</td>
+<td align="right">233.13</td>
+<td align="right">6.98</td>
+</tr>
+<tr>
+<td align="right">204.47</td>
+<td align="right">2.75</td>
+<td align="right">216.36</td>
+<td align="right">2.01</td>
+</tr>
+<tr>
+<td align="right">207.40</td>
+<td align="right">2.94</td>
+<td align="right">223.03</td>
+<td align="right">2.34</td>
+</tr>
+<tr>
+<td align="right">216.86</td>
+<td align="right">2.60</td>
+<td align="right">230.42</td>
+<td align="right">2.29</td>
+</tr>
+</tbody></table>
+
+<p><br> </p>
+
+<p>Problem? The column headers are values, not variables. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Tidied version</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th align="right">leaid</th>
+<th align="left">leaname</th>
+<th align="right">fips</th>
+<th align="left">stateabb</th>
+<th align="right">year</th>
+<th align="right">grade</th>
+<th align="left">Subject</th>
+<th align="right">mean</th>
+<th align="right">se</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right">100002</td>
+<td align="left">ALABAMA YOUTH SERVICES</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2009</td>
+<td align="right">8</td>
+<td align="left">ela</td>
+<td align="right">210.5474</td>
+<td align="right">6.723581</td>
+</tr>
+<tr>
+<td align="right">100002</td>
+<td align="left">ALABAMA YOUTH SERVICES</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2011</td>
+<td align="right">8</td>
+<td align="left">ela</td>
+<td align="right">231.6601</td>
+<td align="right">6.741922</td>
+</tr>
+<tr>
+<td align="right">100002</td>
+<td align="left">ALABAMA YOUTH SERVICES</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2012</td>
+<td align="right">8</td>
+<td align="left">ela</td>
+<td align="right">226.1813</td>
+<td align="right">6.657756</td>
+</tr>
+<tr>
+<td align="right">100005</td>
+<td align="left">ALBERTVILLE CITY</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2009</td>
+<td align="right">3</td>
+<td align="left">ela</td>
+<td align="right">204.4659</td>
+<td align="right">2.747565</td>
+</tr>
+<tr>
+<td align="right">100005</td>
+<td align="left">ALBERTVILLE CITY</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2009</td>
+<td align="right">4</td>
+<td align="left">ela</td>
+<td align="right">207.4045</td>
+<td align="right">2.939638</td>
+</tr>
+<tr>
+<td align="right">100005</td>
+<td align="left">ALBERTVILLE CITY</td>
+<td align="right">1</td>
+<td align="left">AL</td>
+<td align="right">2009</td>
+<td align="right">5</td>
+<td align="left">ela</td>
+<td align="right">216.8594</td>
+<td align="right">2.599224</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Other examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>(from the JSS paper)</p>
+
+<table><thead>
+<tr>
+<th align="left">religion</th>
+<th align="right">&lt;$10k</th>
+<th align="right">$10-20k</th>
+<th align="right">$20-30k</th>
+<th align="right">$30-40k</th>
+<th align="right">$40-50k</th>
+<th align="right">$50-75k</th>
+<th align="right">$75-100k</th>
+<th align="right">$100-150k</th>
+<th align="right">&gt;150k</th>
+<th align="right">Don&#39;t know/refused</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">Agnostic</td>
+<td align="right">27</td>
+<td align="right">34</td>
+<td align="right">60</td>
+<td align="right">81</td>
+<td align="right">76</td>
+<td align="right">137</td>
+<td align="right">122</td>
+<td align="right">109</td>
+<td align="right">84</td>
+<td align="right">96</td>
+</tr>
+<tr>
+<td align="left">Atheist</td>
+<td align="right">12</td>
+<td align="right">27</td>
+<td align="right">37</td>
+<td align="right">52</td>
+<td align="right">35</td>
+<td align="right">70</td>
+<td align="right">73</td>
+<td align="right">59</td>
+<td align="right">74</td>
+<td align="right">76</td>
+</tr>
+<tr>
+<td align="left">Buddhist</td>
+<td align="right">27</td>
+<td align="right">21</td>
+<td align="right">30</td>
+<td align="right">34</td>
+<td align="right">33</td>
+<td align="right">58</td>
+<td align="right">62</td>
+<td align="right">39</td>
+<td align="right">53</td>
+<td align="right">54</td>
+</tr>
+<tr>
+<td align="left">Catholic</td>
+<td align="right">418</td>
+<td align="right">617</td>
+<td align="right">732</td>
+<td align="right">670</td>
+<td align="right">638</td>
+<td align="right">1116</td>
+<td align="right">949</td>
+<td align="right">792</td>
+<td align="right">633</td>
+<td align="right">1489</td>
+</tr>
+<tr>
+<td align="left">Don’t know/refused</td>
+<td align="right">15</td>
+<td align="right">14</td>
+<td align="right">15</td>
+<td align="right">11</td>
+<td align="right">10</td>
+<td align="right">35</td>
+<td align="right">21</td>
+<td align="right">17</td>
+<td align="right">18</td>
+<td align="right">116</td>
+</tr>
+<tr>
+<td align="left">Evangelical Prot</td>
+<td align="right">575</td>
+<td align="right">869</td>
+<td align="right">1064</td>
+<td align="right">982</td>
+<td align="right">881</td>
+<td align="right">1486</td>
+<td align="right">949</td>
+<td align="right">723</td>
+<td align="right">414</td>
+<td align="right">1529</td>
+</tr>
+<tr>
+<td align="left">Hindu</td>
+<td align="right">1</td>
+<td align="right">9</td>
+<td align="right">7</td>
+<td align="right">9</td>
+<td align="right">11</td>
+<td align="right">34</td>
+<td align="right">47</td>
+<td align="right">48</td>
+<td align="right">54</td>
+<td align="right">37</td>
+</tr>
+<tr>
+<td align="left">Historically Black Prot</td>
+<td align="right">228</td>
+<td align="right">244</td>
+<td align="right">236</td>
+<td align="right">238</td>
+<td align="right">197</td>
+<td align="right">223</td>
+<td align="right">131</td>
+<td align="right">81</td>
+<td align="right">78</td>
+<td align="right">339</td>
+</tr>
+<tr>
+<td align="left">Jehovah&#39;s Witness</td>
+<td align="right">20</td>
+<td align="right">27</td>
+<td align="right">24</td>
+<td align="right">24</td>
+<td align="right">21</td>
+<td align="right">30</td>
+<td align="right">15</td>
+<td align="right">11</td>
+<td align="right">6</td>
+<td align="right">37</td>
+</tr>
+<tr>
+<td align="left">Jewish</td>
+<td align="right">19</td>
+<td align="right">19</td>
+<td align="right">25</td>
+<td align="right">25</td>
+<td align="right">30</td>
+<td align="right">95</td>
+<td align="right">69</td>
+<td align="right">87</td>
+<td align="right">151</td>
+<td align="right">162</td>
+</tr>
+<tr>
+<td align="left">Mainline Prot</td>
+<td align="right">289</td>
+<td align="right">495</td>
+<td align="right">619</td>
+<td align="right">655</td>
+<td align="right">651</td>
+<td align="right">1107</td>
+<td align="right">939</td>
+<td align="right">753</td>
+<td align="right">634</td>
+<td align="right">1328</td>
+</tr>
+<tr>
+<td align="left">Mormon</td>
+<td align="right">29</td>
+<td align="right">40</td>
+<td align="right">48</td>
+<td align="right">51</td>
+<td align="right">56</td>
+<td align="right">112</td>
+<td align="right">85</td>
+<td align="right">49</td>
+<td align="right">42</td>
+<td align="right">69</td>
+</tr>
+<tr>
+<td align="left">Muslim</td>
+<td align="right">6</td>
+<td align="right">7</td>
+<td align="right">9</td>
+<td align="right">10</td>
+<td align="right">9</td>
+<td align="right">23</td>
+<td align="right">16</td>
+<td align="right">8</td>
+<td align="right">6</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td align="left">Orthodox</td>
+<td align="right">13</td>
+<td align="right">17</td>
+<td align="right">23</td>
+<td align="right">32</td>
+<td align="right">32</td>
+<td align="right">47</td>
+<td align="right">38</td>
+<td align="right">42</td>
+<td align="right">46</td>
+<td align="right">73</td>
+</tr>
+<tr>
+<td align="left">Other Christian</td>
+<td align="right">9</td>
+<td align="right">7</td>
+<td align="right">11</td>
+<td align="right">13</td>
+<td align="right">13</td>
+<td align="right">14</td>
+<td align="right">18</td>
+<td align="right">14</td>
+<td align="right">12</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td align="left">Other Faiths</td>
+<td align="right">20</td>
+<td align="right">33</td>
+<td align="right">40</td>
+<td align="right">46</td>
+<td align="right">49</td>
+<td align="right">63</td>
+<td align="right">46</td>
+<td align="right">40</td>
+<td align="right">41</td>
+<td align="right">71</td>
+</tr>
+<tr>
+<td align="left">Other World Religions</td>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">7</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td align="left">Unaffiliated</td>
+<td align="right">217</td>
+<td align="right">299</td>
+<td align="right">374</td>
+<td align="right">365</td>
+<td align="right">341</td>
+<td align="right">528</td>
+<td align="right">407</td>
+<td align="right">321</td>
+<td align="right">258</td>
+<td align="right">597</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>The tidied version</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th align="left">religion</th>
+<th align="left">income</th>
+<th align="right">freq</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">Agnostic</td>
+<td align="left">&lt;$10k</td>
+<td align="right">27</td>
+</tr>
+<tr>
+<td align="left">Agnostic</td>
+<td align="left">$10-20k</td>
+<td align="right">34</td>
+</tr>
+<tr>
+<td align="left">Agnostic</td>
+<td align="left">$20-30k</td>
+<td align="right">60</td>
+</tr>
+<tr>
+<td align="left">Agnostic</td>
+<td align="left">$30-40k</td>
+<td align="right">81</td>
+</tr>
+<tr>
+<td align="left">Agnostic</td>
+<td align="left">$40-50k</td>
+<td align="right">76</td>
+</tr>
+<tr>
+<td align="left">Agnostic</td>
+<td align="left">$50-75k</td>
+<td align="right">137</td>
+</tr>
+<tr>
+<td align="left">Agnostic</td>
+<td align="left">$75-100k</td>
+<td align="right">122</td>
+</tr>
+<tr>
+<td align="left">Agnostic</td>
+<td align="left">$100-150k</td>
+<td align="right">109</td>
+</tr>
+<tr>
+<td align="left">Agnostic</td>
+<td align="left">&gt;150k</td>
+<td align="right">84</td>
+</tr>
+<tr>
+<td align="left">Agnostic</td>
+<td align="left">Don&#39;t know/refused</td>
+<td align="right">96</td>
+</tr>
+<tr>
+<td align="left">Atheist</td>
+<td align="left">&lt;$10k</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td align="left">Atheist</td>
+<td align="left">$10-20k</td>
+<td align="right">27</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Yet another example</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th align="left">country</th>
+<th align="right">year</th>
+<th align="right">m014</th>
+<th align="right">m1524</th>
+<th align="right">m2534</th>
+<th align="right">m3544</th>
+<th align="right">m4554</th>
+<th align="right">mu</th>
+<th align="right">f014</th>
+<th align="right">f1524</th>
+<th align="right">f2534</th>
+<th align="right">f3544</th>
+<th align="right">f4554</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">AD</td>
+<td align="right">2000</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">AE</td>
+<td align="right">2000</td>
+<td align="right">2</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">6</td>
+<td align="right">5</td>
+<td align="right"></td>
+<td align="right">3</td>
+<td align="right">16</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AF</td>
+<td align="right">2000</td>
+<td align="right">52</td>
+<td align="right">228</td>
+<td align="right">183</td>
+<td align="right">149</td>
+<td align="right">129</td>
+<td align="right"></td>
+<td align="right">93</td>
+<td align="right">414</td>
+<td align="right">565</td>
+<td align="right">339</td>
+<td align="right">205</td>
+</tr>
+<tr>
+<td align="left">AG</td>
+<td align="right">2000</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right"></td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AL</td>
+<td align="right">2000</td>
+<td align="right">2</td>
+<td align="right">19</td>
+<td align="right">21</td>
+<td align="right">14</td>
+<td align="right">24</td>
+<td align="right"></td>
+<td align="right">3</td>
+<td align="right">11</td>
+<td align="right">10</td>
+<td align="right">8</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td align="left">AM</td>
+<td align="right">2000</td>
+<td align="right">2</td>
+<td align="right">152</td>
+<td align="right">130</td>
+<td align="right">131</td>
+<td align="right">63</td>
+<td align="right"></td>
+<td align="right">1</td>
+<td align="right">24</td>
+<td align="right">27</td>
+<td align="right">24</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td align="left">AN</td>
+<td align="right">2000</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right"></td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AO</td>
+<td align="right">2000</td>
+<td align="right">186</td>
+<td align="right">999</td>
+<td align="right">1003</td>
+<td align="right">912</td>
+<td align="right">482</td>
+<td align="right"></td>
+<td align="right">247</td>
+<td align="right">1142</td>
+<td align="right">1091</td>
+<td align="right">844</td>
+<td align="right">417</td>
+</tr>
+<tr>
+<td align="left">AR</td>
+<td align="right">2000</td>
+<td align="right">97</td>
+<td align="right">278</td>
+<td align="right">594</td>
+<td align="right">402</td>
+<td align="right">419</td>
+<td align="right"></td>
+<td align="right">121</td>
+<td align="right">544</td>
+<td align="right">479</td>
+<td align="right">262</td>
+<td align="right">230</td>
+</tr>
+<tr>
+<td align="left">AS</td>
+<td align="right">2000</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">1</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">1</td>
+</tr>
+</tbody></table>
+
+<p>In this example, <em>M</em> indicates if the data came from a male, while <em>F</em> indicates female. The subsequent numbers represent the age range. Tidying these data will be a two step process.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Step one</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th align="left">country</th>
+<th align="right">year</th>
+<th align="left">variable</th>
+<th align="right">cases</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">AD</td>
+<td align="right">2000</td>
+<td align="left">m014</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AE</td>
+<td align="right">2000</td>
+<td align="left">m014</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">AF</td>
+<td align="right">2000</td>
+<td align="left">m014</td>
+<td align="right">52</td>
+</tr>
+<tr>
+<td align="left">AG</td>
+<td align="right">2000</td>
+<td align="left">m014</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AL</td>
+<td align="right">2000</td>
+<td align="left">m014</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">AM</td>
+<td align="right">2000</td>
+<td align="left">m014</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">AN</td>
+<td align="right">2000</td>
+<td align="left">m014</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AO</td>
+<td align="right">2000</td>
+<td align="left">m014</td>
+<td align="right">186</td>
+</tr>
+<tr>
+<td align="left">AR</td>
+<td align="right">2000</td>
+<td align="left">m014</td>
+<td align="right">97</td>
+</tr>
+<tr>
+<td align="left">AS</td>
+<td align="right">2000</td>
+<td align="left">m014</td>
+<td align="right">NA</td>
+</tr>
+</tbody></table>
+
+<p>Notice this is much closer to what we want, but we have a problem now in that we have <strong>two variables stored in one column</strong>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Step two: Tidied data</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th align="left">country</th>
+<th align="right">year</th>
+<th align="left">sex</th>
+<th align="left">age_range</th>
+<th align="right">cases</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">AD</td>
+<td align="right">2000</td>
+<td align="left">m</td>
+<td align="left">0-14</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AD</td>
+<td align="right">2000</td>
+<td align="left">m</td>
+<td align="left">15-24</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AD</td>
+<td align="right">2000</td>
+<td align="left">m</td>
+<td align="left">25-34</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">AD</td>
+<td align="right">2000</td>
+<td align="left">m</td>
+<td align="left">35-44</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AD</td>
+<td align="right">2000</td>
+<td align="left">m</td>
+<td align="left">45-54</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AD</td>
+<td align="right">2000</td>
+<td align="left">m</td>
+<td align="left">55-64</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AD</td>
+<td align="right">2000</td>
+<td align="left">m</td>
+<td align="left">65+</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">AE</td>
+<td align="right">2000</td>
+<td align="left">m</td>
+<td align="left">0-14</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">AE</td>
+<td align="right">2000</td>
+<td align="left">m</td>
+<td align="left">15-24</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td align="left">AE</td>
+<td align="right">2000</td>
+<td align="left">m</td>
+<td align="left">25-34</td>
+<td align="right">4</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:;">
+  <hgroup>
+    <h2>Variables as rows and columns</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th align="left">id</th>
+<th align="right">year</th>
+<th align="right">month</th>
+<th align="left">element</th>
+<th align="right">d1</th>
+<th align="right">d2</th>
+<th align="right">d3</th>
+<th align="right">d4</th>
+<th align="right">d5</th>
+<th align="right">d6</th>
+<th align="right">d7</th>
+<th align="right">d8</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">1</td>
+<td align="left">tmax</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">1</td>
+<td align="left">tmin</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">2</td>
+<td align="left">tmax</td>
+<td align="right"></td>
+<td align="right">27.3</td>
+<td align="right">24.1</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">2</td>
+<td align="left">tmin</td>
+<td align="right"></td>
+<td align="right">14.4</td>
+<td align="right">14.4</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">3</td>
+<td align="left">tmax</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">32.1</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">3</td>
+<td align="left">tmin</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">14.2</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">4</td>
+<td align="left">tmax</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">4</td>
+<td align="left">tmin</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">5</td>
+<td align="left">tmax</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">5</td>
+<td align="left">tmin</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:;">
+  <hgroup>
+    <h2>Two Steps</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <h1>Step 1</h1>
+
+<table><thead>
+<tr>
+<th align="left">id</th>
+<th align="right">year</th>
+<th align="right">month</th>
+<th align="left">element</th>
+<th align="left">day_key</th>
+<th align="right">value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">1</td>
+<td align="left">tmax</td>
+<td align="left">d30</td>
+<td align="right">27.8</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">1</td>
+<td align="left">tmin</td>
+<td align="left">d30</td>
+<td align="right">14.5</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">2</td>
+<td align="left">tmax</td>
+<td align="left">d2</td>
+<td align="right">27.3</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">2</td>
+<td align="left">tmin</td>
+<td align="left">d2</td>
+<td align="right">14.4</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">2</td>
+<td align="left">tmax</td>
+<td align="left">d3</td>
+<td align="right">24.1</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">2</td>
+<td align="left">tmin</td>
+<td align="left">d3</td>
+<td align="right">14.4</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">2</td>
+<td align="left">tmax</td>
+<td align="left">d11</td>
+<td align="right">29.7</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">2</td>
+<td align="left">tmin</td>
+<td align="left">d11</td>
+<td align="right">13.4</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">2</td>
+<td align="left">tmax</td>
+<td align="left">d23</td>
+<td align="right">29.9</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="right">2010</td>
+<td align="right">2</td>
+<td align="left">tmin</td>
+<td align="left">d23</td>
+<td align="right">10.7</td>
+</tr>
+</tbody></table>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h1>Step 2</h1>
+
+<table><thead>
+<tr>
+<th align="left">id</th>
+<th align="left">date</th>
+<th align="right">tmax</th>
+<th align="right">tmin</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">MX17004</td>
+<td align="left">2010-01-01</td>
+<td align="right">27.8</td>
+<td align="right">14.5</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="left">2010-02-02</td>
+<td align="right">29.7</td>
+<td align="right">13.4</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="left">2010-02-02</td>
+<td align="right">27.3</td>
+<td align="right">14.4</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="left">2010-02-02</td>
+<td align="right">29.9</td>
+<td align="right">10.7</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="left">2010-02-02</td>
+<td align="right">24.1</td>
+<td align="right">14.4</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="left">2010-03-03</td>
+<td align="right">34.5</td>
+<td align="right">16.8</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="left">2010-03-03</td>
+<td align="right">31.1</td>
+<td align="right">17.6</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="left">2010-03-03</td>
+<td align="right">32.1</td>
+<td align="right">14.2</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="left">2010-04-04</td>
+<td align="right">36.3</td>
+<td align="right">16.7</td>
+</tr>
+<tr>
+<td align="left">MX17004</td>
+<td align="left">2010-05-05</td>
+<td align="right">33.2</td>
+<td align="right">18.2</td>
+</tr>
+</tbody></table>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-30" style="background:;">
+  <hgroup>
+    <h2>A caveat</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>There are many reasons why you might want to have messy data. However, tidy data is an extremely useful format. </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-31" style="background:;">
+  <hgroup>
+    <h2>Let&#39;s look at our simulated class data</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <div align = "left">
+<img src = assets/img/d_1.png width = 500 height = 250>
+</div>
+
+<h1>Discuss the following with a partner or in groups of 3</h1>
+
+<ul>
+<li>Are these data tidy?</li>
+<li>If not, describe what needs to happen to make them tidy.</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <div align = "right">
+<img src = assets/img/d_2.png width = 500 height = 250>
+</div>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32" style="background:;">
+  <hgroup>
+    <h2>Tidied version</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th align="right">sid</th>
+<th align="right">tid</th>
+<th align="right">scid</th>
+<th align="right">tag</th>
+<th align="right">sped</th>
+<th align="right">frl</th>
+<th align="right">male</th>
+<th align="left">disability</th>
+<th align="left">ethnicity</th>
+<th align="right">grade</th>
+<th align="right">score</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="left">ed</td>
+<td align="left">white</td>
+<td align="right">6</td>
+<td align="right">217.1298</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="left">ed</td>
+<td align="left">white</td>
+<td align="right">7</td>
+<td align="right">218.0389</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="left">ed</td>
+<td align="left">white</td>
+<td align="right">8</td>
+<td align="right">223.3295</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="left">none</td>
+<td align="left">white</td>
+<td align="right">6</td>
+<td align="right">191.8206</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="left">none</td>
+<td align="left">white</td>
+<td align="right">7</td>
+<td align="right">203.2515</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="left">none</td>
+<td align="left">white</td>
+<td align="right">8</td>
+<td align="right">200.2320</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-33" style="background:;">
+  <hgroup>
+    <h2>Let&#39;s explore these data a bit.</h2>
+  </hgroup>
+  <article data-timings="">
+    <h1>By disability</h1>
+
+<p><img src="assets/fig/by_disab-1.png" alt="plot of chunk by_disab"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-34" style="background:;">
+  <hgroup>
+    <h1>By disability (continued)</h1>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/by_disab_slopes-1.png" alt="plot of chunk by_disab_slopes"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-35" style="background:;">
+  <hgroup>
+    <h1>By Ethnicity</h1>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/by_ethnicity-1.png" alt="plot of chunk by_ethnicity"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:;">
+  <hgroup>
+    <h2>Things we haven&#39;t covered</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Data types</li>
+<li>Samples and populations (and sampling methods)</li>
+<li>Outcome versus predictor variables</li>
+<li>Observational versus experimental analysis</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>What&#39;s next</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Data types and distributions</li>
+<li>Intro to data visualization: We&#39;ll focus on exploratory plotting</li>
+<li>Applied data visualization: You get to try!</li>
+</ul>
+
+<h1>For the last class</h1>
+
+<ul>
+<li>Get R installed: <a href="https://cran.r-project.org">https://cran.r-project.org</a></li>
+<li>Get RStudio installed: <a href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a></li>
+</ul>
+
+<p><strong>NOTE:</strong> If you need help with either of the above, please contact me. I&#39;d like everybody to be ready to go <strong>before</strong> we need to use it. Best to get it installed now and make sure it&#39;s working so we can troubleshoot if not.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Where?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Examples'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='NA'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='NA'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='NA'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='NA'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='USGS: Earthquake detection'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='NA'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='In Education'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='NA'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='NA'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Discussion'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Steps in utilizing data'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Data basics'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Caution'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='NA'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Data structuring: Making data usable'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Common ways datasets are &quot;messy&quot;'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='An example with SEDA data'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='The offending columns'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Tidied version'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Other examples'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='The tidied version'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Yet another example'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Step one'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Step two: Tidied data'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='Variables as rows and columns'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='Two Steps'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='A caveat'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='Let&#39;s look at our simulated class data'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='Tidied version'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='Let&#39;s explore these data a bit.'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='By disability (continued)'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='By Ethnicity'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Things we haven&#39;t covered'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='What&#39;s next'>
+         37
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
